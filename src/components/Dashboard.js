@@ -4,6 +4,8 @@ import classnames from "classnames";
 
 import Loading from "./Loading";
 
+import Panel from "./Panel";
+
 //mock data
 const data = [
   {
