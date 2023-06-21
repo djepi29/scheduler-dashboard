@@ -8,27 +8,34 @@ import Loading from "./Loading";
 
 import Panel from "./Panel";
 
+import {
+  getTotalInterviews,
+  getLeastPopularTimeSlot,
+  getMostPopularDay,
+  getInterviewsPerDay
+ } from "helpers/selectors";
+
 //mock data
 const data = [
   {
     id: 1,
     label: "Total Interviews",
-    value: 6
+    getValue: 6
   },
   {
     id: 2,
     label: "Least Popular Time Slot",
-    value: "1pm"
+    getValue: "1pm"
   },
   {
     id: 3,
     label: "Most Popular Day",
-    value: "Wednesday"
+    getValue: "Wednesday"
   },
   {
     id: 4,
     label: "Interviews Per Day",
-    value: "2.3"
+    getValue: "2.3"
   }
 ];
 
@@ -84,7 +91,7 @@ class Dashboard extends Component {
       "dashboard--focused": this.state.focused
     });
 
-    console.log(this.state)
+    // console.log(this.state)r
     
     if (this.state.loading) {
       return <Loading/>
